@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio JSON retrofit desde 0</string>
+    <string name="getBtn">obtener datos</string>
+    <string name="tvPrueba">prueba</string>
+</resources>
