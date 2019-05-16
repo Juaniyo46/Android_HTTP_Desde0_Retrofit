@@ -2,33 +2,70 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp">
+
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/id"
+        android:layout_toRightOf="@+id/tvId"
+        android:layout_marginStart="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvId"
+        android:layout_marginTop="9dp"
+        android:text="@string/titulo"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvPrueba"
-        android:layout_toRightOf="@id/id"
-        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/tvTitulo"
+        android:layout_below="@id/id"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="10dp"
         android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tvBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitulo"
+        android:layout_marginTop="40dp"
+        android:text="@string/contenido"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
 
     <TextView
         android:id="@+id/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="13dp"
         android:text="@string/tvPrueba"
-        android:textSize="20dp" />
+        android:layout_toRightOf="@id/tvBody"
+        android:layout_below="@id/title"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"/>
 
 </RelativeLayout>

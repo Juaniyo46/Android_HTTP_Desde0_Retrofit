@@ -2,4 +2,7 @@
     <string name="app_name">Ejercicio JSON retrofit desde 0</string>
     <string name="getBtn">obtener datos</string>
     <string name="tvPrueba">prueba</string>
+    <string name="id">ID:</string>
+    <string name="titulo">Título:</string>
+    <string name="contenido">Contenido:</string>
 </resources>
