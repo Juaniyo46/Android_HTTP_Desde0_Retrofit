@@ -37,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 iniciarControles();
-                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
+
+               /* Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                         .addConverterFactory(GsonConverterFactory.create())
-                        .build();
+                        .build();*/
 
                 LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
                 rvUsuarios.setLayoutManager(llm);
@@ -50,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 DividerItemDecoration itemDecoration = new DividerItemDecoration(rvUsuarios.getContext(),llm.getOrientation());
                 rvUsuarios.addItemDecoration(itemDecoration);
 
-                UsuarioService usuarioService = retrofit.create(UsuarioService.class);
+                //En la siguiente linea le pasamos el RetrofitCliente con la url base para el Singelton.
+                UsuarioService usuarioService = RetrofitClient.getClient(baseUrl).create(UsuarioService.class);
 
                 Call<List<Usuario>> listCall = usuarioService.getUsuarios();
                 listCall.enqueue(new Callback<List<Usuario>>() {
